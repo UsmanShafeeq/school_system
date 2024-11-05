@@ -1,0 +1,67 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+*.db
+
+# Local environment variables
+.env
+*.env
+
+# Ignore migrations
+migrations/
+
+# Ignore media and static files
+media/
+staticfiles/
+static/
+
+# Ignore local settings
+local_settings.py
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Jupyter Notebook files
+.ipynb_checkpoints
+
+# Coverage reports
+.coverage
+coverage.xml
+*.cover
+*.egg-info/
+dist/
+build/
+*.egg
+
+# pytest
+.pytest_cache/
+
+# MyPy
+.mypy_cache/
+
+# Python virtual environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/

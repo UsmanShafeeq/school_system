@@ -1,0 +1,9 @@
+asgiref==3.8.1
+Django==5.1.2
+sqlparse==0.5.1
+tzdata==2024.2
+Django==4.x
+djangorestframework==3.x
+gunicorn==20.x
+psycopg2-binary==2.x  # For PostgreSQL
+Pillow==8.x  # For image handling
