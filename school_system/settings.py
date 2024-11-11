@@ -24,7 +24,7 @@ DJANGO_APPS = [
 ]
 
 PROJECT_APPS = [
-   'apps.accounts','apps.admissions','apps.academics','apps.attendance','apps.exams','apps.fees','apps.notifications'
+   'apps.accounts','apps.admissions','apps.academics','apps.attendance','apps.exams','apps.fees','apps.notifications','apps.core'
 ]
 
 THIRD_PARTY_APPS = [
@@ -112,3 +112,38 @@ EMAIL_PORT = int(os.getenv("EMAIL_PORT", 587))
 EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS", "True") == "True"
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "")
+
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# Redirects
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'
+
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'debug.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'accounts': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
+
+LOGIN_URL = 'login'  # Define your login URL name here
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'
